@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KITESTSHOT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>🟣 KITESTSHOT</h2>
+  <button onclick="showLogin()">Kirish</button>
+</header>
+
+<section id="home">
+  <h1>O‘yna. Kashf et. <span>G‘alaba qozon!</span></h1>
+  <p>O‘z olamingni yarat va yangi sarguzashtlarga qo‘shil.</p>
+  <input id="playerName" placeholder="O‘yinchi nomini yozing">
+  <button onclick="startGame()">O‘YINNI BOSHLASH</button>
+
+  <h2>O‘yin olamlari</h2>
+  <div class="worlds">
+    <div onclick="startGame()">🏙️ Neon City</div>
+    <div onclick="startGame()">🌲 Wild Forest</div>
+    <div onclick="startGame()">☁️ Sky Island</div>
+  </div>
+</section>
+
+<section id="game" hidden>
+  <div class="gamebar">
+    <b id="welcome">O‘yinchi</b>
+    <span>🪙 <b id="coins">0</b></span>
+    <button onclick="exitGame()">Chiqish</button>
+  </div>
+  <div id="gameArea">
+    <div id="ground"></div>
+    <div id="player">🧍</div>
+    <div id="coin">🪙</div>
+  </div>
+  <div class="controls">
+    <button onpointerdown="move(-1)" onpointerup="stopMove()" onpointerleave="stopMove()">⬅</button>
+    <button onclick="jump()">⬆ Sakrash</button>
+    <button onpointerdown="move(1)" onpointerup="stopMove()" onpointerleave="stopMove()">➡</button>
+  </div>
+  <p>Kompyuter: A/D yoki ←/→. Sakrash: Space.</p>
+</section>
+
+<script src="game.js"></script>
+</body>
+</html>
