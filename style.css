@@ -1,0 +1,138 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #101329;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  padding: 18px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1b2040;
+}
+
+button {
+  background: #8065ff;
+  color: white;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #a18aff;
+}
+
+#home {
+  padding: 50px 15px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h1 span {
+  color: #a18aff;
+}
+
+input {
+  padding: 14px;
+  border-radius: 9px;
+  border: none;
+  margin: 10px;
+  width: 230px;
+}
+
+.worlds {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.worlds div {
+  background: #242b52;
+  padding: 35px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#game {
+  padding: 15px;
+}
+
+.gamebar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#gameArea {
+  position: relative;
+  width: min(900px, 95vw);
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  background: linear-gradient(#5c91d9, #c2e8ff 70%, #64bd7c 70%);
+}
+
+#ground {
+  position: absolute;
+  bottom: 0;
+  height: 95px;
+  width: 100%;
+  background: #31865b;
+}
+
+#player {
+  position: absolute;
+  left: 60px;
+  bottom: 95px;
+  font-size: 48px;
+  z-index: 2;
+}
+
+#coin {
+  position: absolute;
+  left: 65%;
+  bottom: 110px;
+  font-size: 30px;
+}
+
+.controls {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.controls button {
+  min-width: 65px;
+  font-size: 20px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media(max-width:600px) {
+  h1 {
+    font-size: 30px;
+  }
+  #gameArea {
+    height: 330px;
+  }
+}
